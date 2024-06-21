@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* Mensagem para desktops */
+.desktop-message {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 2em;
+    padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-message {
+        display: flex;
+    }
+
+    .header, .hero, .info {
+        display: none;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #151515;
+}
+
+.logo {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #4afe80;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn.primary {
+    background-color: #25d366;
+}
+
+.btn.primary:hover {
+    background-color: #1eb455;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border-color: #25d366;
+}
+
+.btn.secondary:hover {
+    background-color: #25d366;
+}
+
+/* Hero image */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Layout para desktop */
+@media screen and (min-width: 768px) {
+    .hero {
+        display: none;
+    }
+
+    .header, .nav {
+      display: none;
+    }
+}
+
+/* Adiciona um layout responsivo para telas menores */
+@media screen and (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-image {
+        width: 50%;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* Info section */
+.info {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.2em;
+}
