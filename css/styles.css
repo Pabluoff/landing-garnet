@@ -37,7 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #1515158b;
+  background-color: #00000095;
   position: fixed;
   top: 0;
   width: 100%;
@@ -120,20 +120,20 @@ body {
 }
 
 .btn.primary {
-  background-color: #25d366;
+  background-color: #009646;
 }
 
 .btn.primary:hover {
-  background-color: #1eb455;
+  background-color: #00843e;
 }
 
 .btn.secondary {
   background-color: transparent;
-  border-color: #25d366;
+  border-color: #009646;
 }
 
 .btn.secondary:hover {
-  background-color: #25d366;
+  background-color: #009646;
 }
 
 /* Hero image */
@@ -259,4 +259,87 @@ body {
   background-color: #009646;
   border-radius: 50%;
   color: #ffff;
+}
+
+.pricing {
+  background-color: #ffffff;
+  padding: 50px -5px;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricing-card {
+  background-color: #101010;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+}
+
+.pricing-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.pricing-card .price {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.pricing-card .price span {
+  font-size: 0.5em;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.pricing-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #009646;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pricing-card .btn:hover {
+  background-color: #1eb455;
+}
+
+.pricing-card .btn ion-icon {
+  margin-left: 8px;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
