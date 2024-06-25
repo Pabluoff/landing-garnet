@@ -261,9 +261,10 @@ body {
   color: #ffff;
 }
 
+/* Price */
 .pricing {
   background-color: #ffffff;
-  padding: 50px -5px;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -277,25 +278,29 @@ body {
 .pricing-card {
   background-color: #101010;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   max-width: 300px;
   width: 100%;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-card h3 {
   font-size: 1.8em;
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 .pricing-card .price {
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #ffffff;
 }
 
 .pricing-card .price span {
@@ -312,6 +317,13 @@ body {
   font-size: 1em;
   margin-bottom: 10px;
   color: #cccccc;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-card ul li ion-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
 }
 
 .pricing-card .btn {
@@ -329,7 +341,7 @@ body {
 }
 
 .pricing-card .btn:hover {
-  background-color: #1eb455;
+  background-color: #00843e;
 }
 
 .pricing-card .btn ion-icon {
@@ -337,9 +349,93 @@ body {
   font-size: 1.2em;
 }
 
+/* Advanced Card Styles */
+.pricing-card.advanced {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.advanced .ribbon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.advanced .ribbon::before {
+  content: 'Recomendado';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background: #1eb455;
+  transform: rotate(45deg) translateY(-20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.advanced .ribbon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #00843e;
+  z-index: -1;
+  box-shadow: -140px -140px #00843e;
+}
+
+.pricing-card.advanced h3,
+.pricing-card.advanced .price,
+.pricing-card.advanced ul li {
+  color: #000000;
+}
+
 @media screen and (max-width: 768px) {
   .pricing-container {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.btn-buy-fix {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 32px;
+  background-color: #ffffff62;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  text-wrap: nowrap;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+
+}
+
+.btn-buy-fix ion-icon {
+  margin-left: 45px;
+  font-size: 22px;
+  padding: 7px;
+  background-color: #009646;
+  border-radius: 50%;
+  color: #ffff;
 }
