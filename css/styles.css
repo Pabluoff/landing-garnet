@@ -418,23 +418,23 @@ body {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: 32px;
-  background-color: #ffffff62;
-  color: #000000;
+  background-color: #2e2e309a;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   text-wrap: nowrap;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 
 }
 
 .btn-buy-fix ion-icon {
-  margin-left: 45px;
-  font-size: 22px;
-  padding: 7px;
+  margin-left: 65px;
+  font-size: 34px;
+  padding: 4px;
   background-color: #009646;
   border-radius: 50%;
   color: #ffff;
