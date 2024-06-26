@@ -407,6 +407,23 @@ body {
   color: #000000;
 }
 
+.btn-additional-info {
+  margin-top: 20px;
+  z-index: 10;
+  font-size: 0.7em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #efeff2;
+}
+
+.btn-additional-info ion-icon {
+  margin-right: 5px;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 768px) {
   .pricing-container {
     flex-direction: column;
