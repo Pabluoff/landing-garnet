@@ -9,25 +9,39 @@
     <script src="https://kit.fontawesome.com/cd363fe7f3.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Incluir jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Incluir slick-carousel -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <p>Garnet</p>
+            <a href="#hero">
+                <p>Garnet</p>
+            </a>
+
         </div>
         <nav class="nav">
-            <a href="#"><ion-icon name="bag-outline"></ion-icon></a>
+            <a href="#pricing"><ion-icon name="bag-outline"></ion-icon></a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Garnet Pro</h1>
-            <p>Otimização avançada. Sensibilidade sem igual.</p>
+            <p>Otimização avançada. <br>Sensibilidade sem igual.</p>
             <div class="hero-buttons">
-                <a href="#" class="btn primary">Saiba mais</a>
-                <a href="#" class="btn secondary">Baixar Agora</a>
+                <a href="#faq" class="btn primary">Saiba mais</a>
+                <a href="#pricing" class="btn secondary">Baixar Agora</a>
             </div>
         </div>
         <div class="hero-image">
@@ -35,7 +49,7 @@
         </div>
     </section>
 
-    <section class="info">
+    <section class="info" id="info">
         <div class="info-items">
             <div class="info-item">
                 <ion-icon name="cube-outline"></ion-icon>
@@ -56,11 +70,93 @@
             </div>
         </div>
         <div class="btn-more-container">
-            <a href="#" class="btn-more">Saiba Mais <ion-icon name="add-sharp"></ion-icon></a>
+            <a href="#faq" class="btn-more">Saiba Mais <ion-icon name="add-sharp"></ion-icon></a>
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="about">
+        <div class="about-content">
+            <h2>O QUE VOCÊ VAI CONSEGUIR?</h2>
+            <p>Descubra o poder do HS sem xits. Com Garnet, você tem acesso a configurações otimizadas para
+                <span class="highlight">Android e IPhone</span>, ajustes personalizados dentro do Free Fire e nosso
+                <span class="highlight">aplicativo exclusivo</span>. Domine técnicas infalíveis para se destacar em
+                qualquer
+                batalha e desvende os segredos dos melhores pro-players.
+            </p>
+            <div class="approval-badge">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <span>Aprovado pela Garena</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="testimonial-title">Motivos para adquirir seu Garnet agora</h2>
+        <h3 class="testimonial-subtitle">DEPOIMENTO DOS MEMBROS</h3>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Mano, o Garnet mudou tudo no meu jogo. As configs avançadas deixaram minha gameplay muito mais
+                        fodaaa"</p>
+                    <span class="author">- Jota p</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Nunca pensei que um app podia dar tanta vantagem. Agora tô amassando nas partidas. Recomendo
+                        demais!"</p>
+                    <span class="author">- Karlus op</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"O Garnet é top! Mudou meu jeito de jogar Free Fire. Fala sério, indico pra geral que quer ser
+                        bom no jogo."</p>
+                    <span class="author">- Miguel Viena</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-navigation">
+            <button class="prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
+            <button class="next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <h2>SAIBA MAIS</h2>
+        <div class="faq-item">
+            <button class="faq-question">O que é o Garnet?<span class="icon">+</span></button>
+            <div class="faq-answer">
+                <p>O Garnet é um aplicativo projetado para melhorar o desempenho e a sensibilidade do seu dispositivo,
+                    garantindo uma experiência de jogo mais suave e sem lags.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Como funciona o aprimoramento de sensibilidade?<span
+                    class="icon">+</span></button>
+            <div class="faq-answer">
+                <p>O aprimoramento de sensibilidade ajusta as configurações do seu dispositivo para responder mais
+                    rapidamente aos seus toques, proporcionando um controle mais preciso e fluido.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">O Garnet é compatível com todos os dispositivos?<span
+                    class="icon">+</span></button>
+            <div class="faq-answer">
+                <p>Sim, o Garnet foi desenvolvido para ser compatível com uma ampla gama de dispositivos, garantindo que
+                    você possa aproveitar seus benefícios independentemente do hardware.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">O que fazer se eu não gostar do Sistema?<span class="icon">+</span></button>
+            <div class="faq-answer">
+                <p>Você tem até 20 dias após a compra para testar todas as funcionalidades do aplicativo. Se não ficar
+                    satisfeito por qualquer motivo, oferecemos reembolso total.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
         <div class="pricing-container">
             <div class="pricing-card">
                 <h3>Basic</h3>
@@ -69,11 +165,11 @@
                     <li><ion-icon name="checkmark-outline"></ion-icon> Otimização avançada</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Redução de lag</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Ajuste de sensibilidade</li>
-                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 86%</li>
+                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 90%</li>
                     <li><ion-icon name="close-outline"></ion-icon> Acesso a novas funções</li>
                     <li><ion-icon name="close-outline"></ion-icon> Suporte por e-mail</li>
                 </ul>
-                <a href="#" class="btn">Escolher Plano <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                <a href="#" class="btn">Garantir meu acesso <ion-icon name="arrow-forward-outline"></ion-icon></a>
             </div>
             <div class="pricing-card advanced">
                 <span class="ribbon"></span>
@@ -82,12 +178,12 @@
                 <ul>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Otimização avançada</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Redução de lag</li>
-                    <li><ion-icon name="checkmark-outline"></ion-icon> Suporte por e-mail</li> 
-                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 92%</li>   
+                    <li><ion-icon name="checkmark-outline"></ion-icon> Suporte por e-mail</li>
+                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 94%</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Ajuste de sensibilidade</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Acesso a novas funções</li>
                 </ul>
-                <a href="#" class="btn">Escolher Plano <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                <a href="#" class="btn">Garantir meu acesso <ion-icon name="arrow-forward-outline"></ion-icon></a>
             </div>
             <div class="pricing-card">
                 <h3>Premium</h3>
@@ -96,17 +192,18 @@
                     <li><ion-icon name="checkmark-outline"></ion-icon> Otimização máxima</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Eliminação de lag</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Suporte por e-mail</li>
-                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 98%</li> 
+                    <li><ion-icon name="checkmark-outline"></ion-icon> InsightShot HS 98%</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Ajuste de sensibilidade</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Configurações avançada</li>
                     <li><ion-icon name="checkmark-outline"></ion-icon> Acesso a novas funções</li>
                 </ul>
-                <a href="#" class="btn">Escolher Plano <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                <a href="#" class="btn">Garantir meu acesso <ion-icon name="arrow-forward-outline"></ion-icon></a>
             </div>
         </div>
     </section>
-    <a href="#" class="btn-buy-fix">Baixar Agora<ion-icon name="add-sharp"></ion-icon></a>
+    <a href="#pricing" class="btn-buy-fix">Baixar Agora <ion-icon name="add-sharp"></ion-icon></a>
 
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>
