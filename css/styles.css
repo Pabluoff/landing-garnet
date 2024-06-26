@@ -700,6 +700,7 @@ body {
     text-align: left;
     margin-left: 10px;
   }
+  
 }
 
 .verified-recommendation {
@@ -709,8 +710,16 @@ body {
   text-align: center;
 }
 
+.verified-video-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: #090909;
+}
+
 .verified-video {
-  margin-top: 40px;
-  max-width: 100%;
-  
+  max-width: none;
+  height: 60%;
+  margin-top: -25px;
 }
