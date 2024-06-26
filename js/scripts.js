@@ -2,14 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnBuyFix = document.querySelector('.btn-buy-fix');
     const pricingSection = document.querySelector('.pricing');
     const heroSection = document.querySelector('.hero');
+    const guaranteeSection = document.querySelector('.guarantee'); 
 
     function toggleButtonVisibility() {
         const pricingSectionRect = pricingSection.getBoundingClientRect();
         const heroSectionRect = heroSection.getBoundingClientRect();
+        const guaranteeSectionRect = guaranteeSection.getBoundingClientRect(); 
         const windowHeight = window.innerHeight;
-
-        if ((pricingSectionRect.top < windowHeight && pricingSectionRect.bottom > 0) ||
-            (heroSectionRect.top < windowHeight && heroSectionRect.bottom > 0)) {
+        const pricingVisible = (pricingSectionRect.top < windowHeight && pricingSectionRect.bottom > 0);
+        const heroVisible = (heroSectionRect.top < windowHeight && heroSectionRect.bottom > 0);
+        const guaranteeVisible = (guaranteeSectionRect.top < windowHeight && guaranteeSectionRect.bottom > 0);
+        if (pricingVisible || heroVisible || guaranteeVisible) {
             btnBuyFix.classList.remove('visible');
         } else {
             btnBuyFix.classList.add('visible');
