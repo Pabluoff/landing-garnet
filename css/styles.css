@@ -819,6 +819,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s, top 0.5s;
   font-family: 'Roboto', sans-serif;
+  cursor: grab;
 }
 
 .sale-notification.visible {
@@ -840,7 +841,7 @@ body {
 }
 
 #buyer-count {
-  margin-right: 8px; 
+  margin-right: 8px;
   font-weight: bold;
   color: #25d366;
 }
