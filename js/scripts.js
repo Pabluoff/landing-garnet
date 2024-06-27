@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const notification = document.getElementById('sale-notification');
     const buyerCount = document.getElementById('buyer-count');
     let hasScrolled = false;
-    
+    const scrollThreshold = 400; 
     function getRandomBuyers() {
         return Math.floor(Math.random() * 15) + 5;
     }
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     window.addEventListener('scroll', function () {
-        if (!hasScrolled) {
+        if (!hasScrolled && window.scrollY > scrollThreshold) {
             hasScrolled = true;
             showNotification();
             scheduleNotification();
