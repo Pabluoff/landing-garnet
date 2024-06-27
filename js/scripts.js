@@ -88,3 +88,31 @@ $(document).ready(function () {
         $('.testimonials-container').slick('slickNext');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const notification = document.getElementById('sale-notification');
+    const buyerCount = document.getElementById('buyer-count');
+    
+    function getRandomBuyers() {
+        return Math.floor(Math.random() * 15) + 5;
+    }
+    
+    function showNotification() {
+        buyerCount.textContent = getRandomBuyers();
+        notification.classList.add('visible');
+        
+        setTimeout(() => {
+            notification.classList.remove('visible');
+        }, 5000); 
+    }
+    
+    function scheduleNotification() {
+        setTimeout(() => {
+            showNotification();
+            scheduleNotification();
+        }, Math.random() * 15000 + 15000); 
+    }
+    
+    showNotification();
+    scheduleNotification();
+});
