@@ -819,7 +819,6 @@ body {
   opacity: 0;
   transition: opacity 0.5s, top 0.5s;
   font-family: 'Roboto', sans-serif;
-  cursor: grab;
 }
 
 .sale-notification.visible {
