@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #25d366;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1eb455;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.maintenance-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(25px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.maintenance-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.maintenance-icon {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.maintenance-icon ion-icon {
+  font-size: 4em;
+  color: #4afe80;
+  animation: pulse 2s infinite;
+}
+
+.progress-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid rgba(74, 254, 128, 0.1);
+  border-top-color: #4afe80;
+  animation: spin 1.5s linear infinite;
+}
+
+.maintenance-title {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.maintenance-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.maintenance-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 45%;
+  height: 100%;
+  background: #4afe80;
+  animation: progress 2s infinite ease-in-out;
+}
+
+.maintenance-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(74, 254, 128, 0.1);
+  border-radius: 50px;
+  color: #4afe80;
+  font-size: 0.9em;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-content {
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .maintenance-title {
+    font-size: 1.5em;
+  }
+}
